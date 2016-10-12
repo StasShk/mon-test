@@ -7,6 +7,7 @@ from fabric.api import *
 from fabric.contrib.files import sed
 from config import nginx_config
 
+env.user = 'root'
 
 env.colorize_errors = 'true'
 key_filename = "~/.ssh/id_rsa"
