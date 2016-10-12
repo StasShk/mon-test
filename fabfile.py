@@ -138,10 +138,11 @@ def restart_all():
 @task   
 def deploy(servername='192.168.122.203', username='stas'):
     
-    user_create()
+
     with settings(user=env.user):
         install_mariadb()
         install_nginx()
         install_php()
         install_wp()
         restart_all()
+    user_create()
